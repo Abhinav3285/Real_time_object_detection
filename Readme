@@ -1,0 +1,99 @@
+# Real-Time Object Detection Web Application
+
+This is a **real-time object detection system** using your **webcam**, powered by **YOLOv10** and a **Flask web interface**. Snapshots are automatically saved based on detected objects, organized by session and class.
+
+---
+
+## About the Project
+
+This project was built as part of my final year coursework in Computer Science. It is designed to demonstrate skills in:
+
+- Computer Vision (OpenCV + YOLOv10)
+- Python backend development using Flask
+- Frontend integration using HTML/CSS/JS
+- Real-time video processing
+- File management and system integration
+
+---
+
+## Features
+
+- Real-time object detection using your device webcam
+- Clean web interface to start/stop sessions
+- Snapshots are saved automatically per object class
+- Each session has its own snapshot folder
+- Scrollable sidebar shows detected objects with:
+  - Object name
+  - Confidence level
+  - Time of detection
+
+---
+
+## Folder Structure
+real_time_object_detection/
+│
+├── app.py # Main Flask backend
+├── requirements.txt # Required Python libraries
+├── README.md # Project documentation
+├── .gitignore # Git ignore file
+├── yolov10n.pt # Pre-trained YOLOv10 nano model (NOT uploaded)
+│
+├── static/
+│ ├── style.css # Custom styles
+│ └── snapshots/ # Auto-generated session folders
+│
+├── templates/
+│ ├── index.html # Start page
+│ ├── detection.html # Live stream page
+│ └── snapshots.html # Snapshot gallery
+
+
+--------------------------------------------------------
+
+## Installation Steps
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/real_time_object_detection.git
+cd real_time_object_detection
+
+
+### 2.Install required Libraries 
+pip install -r requirements.txt
+
+
+### 3. Download YOLOv10 Model
+Model is NOT included in the repo due to its size.
+
+Download yolov10n.pt from the official YOLOv10 repo:
+
+https://github.com/THU-MIG/yolov10/releases
+
+Place it in the root folder (real_time_object_detection/)
+
+
+### 4.Running the Application
+python app.py
+
+Visit this in your browser:
+http://127.0.0.1:5000/
+
+
+### OUTPUT:
+ Using the App
+Go to the homepage and enter a session name (optional)
+
+Click “Start Detection” → Webcam opens → Detection starts
+
+Detected objects appear on the right with confidence and time
+
+Stop detection → View Snapshots → Explore images class-wise
+
+
+### Snapshot Location
+Images are saved under:
+
+static/snapshots/<session_name>/<class_name>/
+
+Each image is named with its timestamp.

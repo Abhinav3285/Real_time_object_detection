@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+*.log
+
+# Environment
+.env
+
+# Snapshots
+static/snapshots/
+
+# Model file
+yolov10n.pt
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Model weights (if not required)
+*.pt
